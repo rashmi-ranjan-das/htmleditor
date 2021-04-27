@@ -20,13 +20,13 @@
                 <form action="{% url 'run' %}" method="post">
                     {% csrf_token %}
                     <h4 class="text-center alert alert-primary">Enter Your HTMl Code</h3>
-                    <textarea name="html" id="html" cols="100" rows="18" placeholder="Enter Code Here...">{{html}}</textarea>
+                    <textarea name="html" id="html" cols="100" rows="18" placeholder="Enter Code Here..." class="form-control">{{html}}</textarea>
                     <input type="submit" value="Run" class="btn btn-success">
                 </form>
             </div>
             <div class="col-sm-6">
                 <h4 class="text-center alert alert-warning">Output</h3>
-                {{html | safe}}
+                <div>{{html | safe}}</div>
             </div>
         </div>
     </div>
